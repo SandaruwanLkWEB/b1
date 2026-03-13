@@ -25,6 +25,9 @@ import ArchivePage from './pages/ArchivePage';
 import SelfServicePage from './pages/SelfServicePage';
 import GroupingTemplatesPage from './pages/GroupingTemplatesPage';
 import DriverMobilePage from './pages/DriverMobilePage';
+import SelfRegisterPage from './pages/SelfRegisterPage';
+import ForgotPasswordPage from './pages/ForgotPasswordPage';
+import HelpDeskPage from './pages/HelpDeskPage';
 
 const adminRoles: Role[] = ['ADMIN', 'SUPER_ADMIN'];
 const placeRoles: Role[] = ['ADMIN', 'SUPER_ADMIN', 'HOD'];
@@ -42,6 +45,9 @@ export default function App() {
   return (
     <Routes>
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/self-register" element={<SelfRegisterPage />} />
+      <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+      <Route path="/help-desk" element={<HelpDeskPage />} />
 
       <Route element={<ProtectedRoute />}>
         <Route path="/" element={<AppShell><DashboardPage /></AppShell>} />
